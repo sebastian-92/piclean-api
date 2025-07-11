@@ -1,4 +1,4 @@
-fastapi
+fastapi[standard]
 py_mini_racer
 requests
 beautifulsoup4
