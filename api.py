@@ -14,6 +14,16 @@ api = "https://api.picrew.me/"
 cdn = "https://cdn.picrew.me/"
 
 
+@app.get("/", description="Just gives some info to people stumbling upon it")
+def root():
+    return {
+        "message": "Piclean API",
+        "version": "0.1.0",
+        "documentation": ["/docs", "/redoc"],
+        "repo": "https://github.com/sebastian-92/piclean-api",
+    }
+
+
 @app.get("/discovery")  # discovery page
 def discovery(
     lang: str = Query(
