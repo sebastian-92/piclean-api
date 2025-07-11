@@ -1,0 +1,4 @@
+fastapi
+py_mini_racer
+requests
+beautifulsoup4
