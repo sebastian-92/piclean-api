@@ -132,7 +132,7 @@ def search(
         creators = soop.find_all(class_="search-ImagemakerList_Creator")
         images = soop.find_all(class_="search-ImagemakerList_Icon")
         titles = soop.find_all(class_="search-ImagemakerList_Title")
-        ids = re.findall(r"image_maker/([0-9]+)", soop.prettify())
+        ids = re.findall(r"image_maker/([0-9]+)", soop.prettify())[::3]
         print(
             f"Found {len(creators)} creators, {len(images)} images, {len(titles)} titles, and {len(ids)} ids"
         )
